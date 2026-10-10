@@ -506,7 +506,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
     <div class="kolam" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#star"/></svg></div>
     <h2 id="wish-h">Send Wishes</h2>
     <p>Your blessings mean the world to us. Write a few words and send them on WhatsApp.</p>
-    <a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=Dear%20Balakrishna%20%26%20Divyapriya%2C%20wishing%20you%20both%20a%20very%20happy%20married%20life!">Write a wish</a>
+    <a class="btn" id="wish-link" target="_blank" rel="noopener" href="https://wa.me/?text=Dear%20Balakrishna%20%26%20Divyapriya%2C%20wishing%20you%20both%20a%20very%20happy%20married%20life!">Write a wish</a>
   </section>
 
   <footer class="thanks reveal">
@@ -597,6 +597,20 @@ html.anim .reveal.in { opacity: 1; transform: none; }
     cover.classList.add('leaving');
     setTimeout(reveal, 950);
   });
+
+  /* ---- wishes go to whoever shared the link: ?from=groom or ?from=bride ---- */
+  (function () {
+    var people = {
+      groom: { number: '918879133898', text: 'Dear Balakrishna, wishing you and Divyapriya a very happy married life!' },
+      bride: { number: '919025457993', text: 'Dear Divyapriya, wishing you and Balakrishna a very happy married life!' }
+    };
+    var from = '';
+    try { from = (new URLSearchParams(window.location.search).get('from') || '').toLowerCase(); } catch (e) {}
+    if (!from) { from = (window.location.hash || '').replace('#', '').toLowerCase(); }
+    var who = people[from];
+    var link = document.getElementById('wish-link');
+    if (who && link) { link.href = 'https://wa.me/' + who.number + '?text=' + encodeURIComponent(who.text); }
+  })();
 
   /* ---- countdown: muhurtham begins 15 Nov 2026, 6.00 am IST (00:30 UTC) ---- */
   var target = Date.UTC(2026, 10, 15, 0, 30, 0);
