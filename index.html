@@ -9,7 +9,7 @@
 <meta property="og:description" content="Wedding invitation. Reception on Saturday 14 November 2026, 6.30 pm, at Sri Venkateswara Mahal A/C, Pattabiram.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kawbalak.github.io/Balakrishna-Weds-Divyapriya/">
-<meta property="og:image" content="https://kawbalak.github.io/Balakrishna-Weds-Divyapriya/preview.jpg">
+<meta property="og:image" content="https://kawbalak.github.io/Balakrishna-Weds-Divyapriya/preview-couple.jpg">
 <meta property="og:image:width" content="900">
 <meta property="og:image:height" content="900">
 <meta name="theme-color" content="#24130a">
@@ -304,9 +304,13 @@ html.sealed .sheet, html.sealed .music, html.sealed .dust { display: none; }
 .compliments { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.45; margin-top: 1.5rem; }
 .compliments .label { display: block; margin-bottom: 0.4rem; }
 .closing .inner { padding-bottom: 0.5rem; }
-.scene { position: relative; z-index: 1; margin-inline: var(--pil); }
-.scene img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 8%); mask-image: linear-gradient(to bottom, transparent 0%, #000 8%); }
-.scene .looking { position: absolute; left: 1%; top: 21.5%; width: 57%; text-align: center; font-family: var(--f-script); font-size: min(7.2vw, 2.5rem); line-height: 1.22; color: #2f5a35; text-wrap: balance; }
+.portrait { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.9rem; padding: 1.5rem calc(var(--pil) + 14px) 0; }
+.portrait .looking { font-family: var(--f-script); font-size: clamp(2.1rem, 9.4vw, 2.8rem); line-height: 1.15; color: var(--rose); text-align: center; text-wrap: balance; text-shadow: var(--emboss); }
+.frame { position: relative; margin: 0; width: min(80%, 21rem); padding: 7px; border-radius: 50% 50% 12px 12px / 28.4% 28.4% 12px 12px; background: linear-gradient(135deg, #fff3bd, #d49b2c 28%, #8f5d0c 52%, #ecc463 76%, #7c500c); box-shadow: 0 22px 34px -14px rgba(60, 30, 10, 0.6), 0 0 0 1px rgba(90, 55, 10, 0.5); }
+.frame::before { content: ""; position: absolute; inset: 4px; border-radius: inherit; border: 1px solid rgba(255, 246, 220, 0.75); pointer-events: none; z-index: 1; }
+.frame img { display: block; width: 100%; height: auto; border-radius: 50% 50% 6px 6px / 28.1% 28.1% 6px 6px; }
+.frame::after { content: ""; position: absolute; inset: 7px; border-radius: 50% 50% 6px 6px / 28.1% 28.1% 6px 6px; box-shadow: inset 0 0 18px rgba(60, 30, 10, 0.35); pointer-events: none; }
+.portrait-pond { position: relative; z-index: 4; margin-top: -19%; }
 
 /* ---------- Petals and music ---------- */
 .dust { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 8; pointer-events: none; opacity: 0.85; }
@@ -566,10 +570,11 @@ html.anim .reveal.in { opacity: 1; transform: none; }
         <p class="compliments"><span class="label">With best compliments from</span>Friends &amp; Relatives<br>Enjoy Friends Group, Worli, Mumbai – 400030</p>
       </div>
     </div>
-    <div class="scene">
-      <img src="couple-scene.webp" alt="Illustration of Balakrishna and Divyapriya in traditional dress, beneath a flowering tree and brass lamps, with lotuses beside them" width="1080" height="1917">
+    <div class="portrait reveal">
       <p class="looking">Looking forward to your presence</p>
+      <figure class="frame"><img src="couple-photo.webp" alt="Balakrishna and Divyapriya" width="900" height="1600" loading="lazy"></figure>
     </div>
+    <img class="pond portrait-pond" src="pond.webp" alt="" width="1200" height="450" loading="lazy">
   </section>
 
   <div class="beam" aria-hidden="true"></div>
