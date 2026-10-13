@@ -122,7 +122,7 @@ p, h1, h2, h3 { margin: 0; }
 }
 .inner > * { min-width: 0; width: 100%; display: flex; flex-direction: column; align-items: center; }
 .beam { position: relative; z-index: 5; height: 26px; background: var(--wood) var(--beam) repeat-x 50% 0 / auto 100%; box-shadow: 0 7px 14px -4px rgba(20, 8, 2, 0.7); }
-.pond { position: relative; z-index: 3; width: 100%; height: auto; margin-top: -0.5rem; }
+.pond { position: relative; z-index: 3; width: 100%; height: auto; margin-top: -14%; pointer-events: none; }
 .watermark { position: absolute; z-index: 1; left: 50%; bottom: 8%; width: 82%; height: auto; transform: translateX(-50%); opacity: 0.13; pointer-events: none; }
 
 /* ---------- Type ---------- */
@@ -192,9 +192,9 @@ p, h1, h2, h3 { margin: 0; }
 .night .dateline .d { font-size: clamp(1.7rem, 7.8vw, 2.25rem); }
 .rays { position: absolute; z-index: 1; left: 50%; bottom: 8%; width: 150%; aspect-ratio: 1; transform: translate(-50%, 18%); background: repeating-conic-gradient(from 0deg, rgba(232, 182, 92, 0.22) 0deg 3deg, rgba(232, 182, 92, 0) 3deg 10deg); -webkit-mask-image: radial-gradient(closest-side, #000 8%, rgba(0, 0, 0, 0.5) 45%, transparent 78%); mask-image: radial-gradient(closest-side, #000 8%, rgba(0, 0, 0, 0.5) 45%, transparent 78%); pointer-events: none; }
 .halo { position: absolute; z-index: 1; left: 50%; bottom: 14%; width: 118%; aspect-ratio: 1; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(255, 221, 150, 0.62), rgba(255, 228, 180, 0.26) 46%, rgba(255, 236, 205, 0) 100%); pointer-events: none; }
-.ground { position: absolute; z-index: 1; left: 50%; bottom: 3.4%; width: 96%; height: 7%; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(54, 30, 8, 0.5), rgba(54, 30, 8, 0.16) 60%, rgba(54, 30, 8, 0)); pointer-events: none; }
-.temple { position: absolute; z-index: 1; left: 50%; bottom: 6%; height: min(40%, calc(94% - min(50vw, 17rem) - 12.8rem)); width: auto; max-width: none; aspect-ratio: 820 / 962; transform: translateX(-50%); translate: calc(var(--px) * -5px) calc(var(--py) * -3px); transition: translate 0.5s ease-out; filter: drop-shadow(8px 6px 9px rgba(60, 30, 10, 0.3)); }
-.tree { position: absolute; z-index: 2; bottom: 4%; height: 47%; width: auto; max-width: none; aspect-ratio: 560 / 1307; transform-origin: 50% 100%; translate: calc(var(--px) * 9px) calc(var(--py) * 4px); transition: translate 0.5s ease-out; filter: drop-shadow(7px 8px 7px rgba(30, 40, 10, 0.3)); }
+.ground { position: absolute; z-index: 1; left: 50%; bottom: calc(min(100vw, 34rem) * 0.12); width: 96%; height: 7%; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(54, 30, 8, 0.5), rgba(54, 30, 8, 0.16) 60%, rgba(54, 30, 8, 0)); pointer-events: none; }
+.temple { position: absolute; z-index: 1; left: 50%; bottom: calc(min(100vw, 34rem) * 0.138); height: min(40%, calc(100% - min(100vw, 34rem) * 0.138 - min(50vw, 17rem) - 12.8rem)); width: auto; max-width: none; aspect-ratio: 820 / 962; transform: translateX(-50%); translate: calc(var(--px) * -5px) calc(var(--py) * -3px); transition: translate 0.5s ease-out; filter: drop-shadow(8px 6px 9px rgba(60, 30, 10, 0.3)); }
+.tree { position: absolute; z-index: 2; bottom: calc(min(100vw, 34rem) * 0.118); height: 47%; width: auto; max-width: none; aspect-ratio: 560 / 1307; transform-origin: 50% 100%; translate: calc(var(--px) * 9px) calc(var(--py) * 4px); transition: translate 0.5s ease-out; filter: drop-shadow(7px 8px 7px rgba(30, 40, 10, 0.3)); }
 .tree.l { left: calc(var(--pil) - 16%); animation: sway-l 7s ease-in-out infinite; }
 .tree.r { right: calc(var(--pil) - 16%); transform: scaleX(-1); animation: sway-r 8s ease-in-out -2s infinite; }
 @keyframes sway-l { 0%, 100% { transform: rotate(-0.7deg); } 50% { transform: rotate(0.9deg); } }
@@ -243,10 +243,10 @@ html.sealed .sheet, html.sealed .music, html.sealed .dust { display: none; }
 .night .btn:hover { background: var(--gold-hi); color: var(--night); }
 .night { --emboss: 0 1px 0 rgba(0, 0, 0, 0.55), 0 0 18px rgba(236, 211, 145, 0.28); }
 .hall { position: absolute; z-index: 3; left: 0; top: 0; width: 100%; height: auto; }
-.candleglow { position: absolute; z-index: 3; left: 50%; top: 0; width: 86%; aspect-ratio: 1; transform: translate(-50%, -14%); background: radial-gradient(closest-side, rgba(255, 204, 110, 0.5), rgba(255, 190, 90, 0.16) 55%, rgba(255, 190, 90, 0)); mix-blend-mode: screen; pointer-events: none; animation: candle 4.6s ease-in-out infinite; }
+.candleglow { position: absolute; z-index: 3; left: 50%; top: 0; width: 70%; aspect-ratio: 1; transform: translate(-50%, -14%); background: radial-gradient(closest-side, rgba(255, 204, 110, 0.5), rgba(255, 190, 90, 0.16) 55%, rgba(255, 190, 90, 0)); mix-blend-mode: screen; pointer-events: none; animation: candle 4.6s ease-in-out infinite; }
 @keyframes candle { 0%, 100% { opacity: 0.62; } 22% { opacity: 0.9; } 41% { opacity: 0.7; } 63% { opacity: 1; } 82% { opacity: 0.74; } }
-.night .inner { margin-top: 6%; padding-bottom: 8.5rem; }
-.candles { position: absolute; z-index: 3; bottom: 0.7rem; width: 21%; height: auto; }
+.night .inner { margin-top: 6%; padding-bottom: 10.5rem; }
+.candles { position: absolute; z-index: 3; bottom: 0.6rem; width: 22%; height: auto; }
 .candles.l { left: calc(var(--pil) + 1px); transform: scaleX(-1); }
 .candles.r { right: calc(var(--pil) + 1px); }
 
@@ -305,13 +305,13 @@ html.sealed .sheet, html.sealed .music, html.sealed .dust { display: none; }
 .compliments { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.45; margin-top: 1.5rem; }
 .compliments .label { display: block; margin-bottom: 0.4rem; }
 .closing .inner { padding-bottom: 0.5rem; }
-.portrait { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.9rem; padding: 1.5rem calc(var(--pil) + 14px) 0; }
+.portrait { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.9rem; padding: 1.5rem calc(var(--pil) + 14px) 3rem; }
 .portrait .looking { font-family: var(--f-script); font-size: clamp(2.1rem, 9.4vw, 2.8rem); line-height: 1.15; color: var(--rose); text-align: center; text-wrap: balance; text-shadow: var(--emboss); }
 .frame { position: relative; margin: 0; width: min(80%, 21rem); padding: 7px; border-radius: 50% 50% 12px 12px / 28.4% 28.4% 12px 12px; background: linear-gradient(135deg, #fff3bd, #d49b2c 28%, #8f5d0c 52%, #ecc463 76%, #7c500c); box-shadow: 0 22px 34px -14px rgba(60, 30, 10, 0.6), 0 0 0 1px rgba(90, 55, 10, 0.5); }
 .frame::before { content: ""; position: absolute; inset: 4px; border-radius: inherit; border: 1px solid rgba(255, 246, 220, 0.75); pointer-events: none; z-index: 1; }
 .frame img { display: block; width: 100%; height: auto; border-radius: 50% 50% 6px 6px / 28.1% 28.1% 6px 6px; }
 .frame::after { content: ""; position: absolute; inset: 7px; border-radius: 50% 50% 6px 6px / 28.1% 28.1% 6px 6px; box-shadow: inset 0 0 18px rgba(60, 30, 10, 0.35); pointer-events: none; }
-.portrait-pond { position: relative; z-index: 4; margin-top: -19%; }
+.portrait-pond { position: relative; z-index: 4; margin-top: -24.5%; }
 
 /* ---------- Petals and music ---------- */
 .dust { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 8; pointer-events: none; opacity: 0.85; }
@@ -408,7 +408,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
       <img class="temple" src="gopuram.webp" alt="" width="820" height="962">
       <img class="tree l" src="vaazhai.webp" alt="" width="560" height="1307">
       <img class="tree r" src="vaazhai.webp" alt="" width="560" height="1307">
-      <img class="pond" src="pond.webp" alt="" width="1200" height="450">
+      <img class="pond" src="floor.webp" alt="" width="1200" height="450">
       <div class="inner">
         <svg class="emblem" viewBox="0 0 90 110" aria-hidden="true"><use href="#kalasam"/></svg>
         <p class="label">Sri Muthumariamman Thunai</p>
@@ -464,7 +464,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
         <p>Mr. V. Ravichandran &amp; Mrs. R. Vijaya</p>
       </div>
     </div>
-    <img class="pond" src="pond.webp" alt="" width="1200" height="450">
+    <img class="pond" src="floor.webp" alt="" width="1200" height="450">
   </section>
 
   <div class="beam" aria-hidden="true"></div>
@@ -472,7 +472,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
   <!-- reception: starlit hall -->
   <section class="page night" aria-labelledby="rec-h">
     <img class="arch" src="arch.webp" alt="" width="1200" height="450">
-    <img class="hall" src="hall.webp" alt="" width="1200" height="690" loading="lazy">
+    <img class="hall" src="reception-top2.webp" alt="" width="1200" height="708" loading="lazy">
     <span class="candleglow"></span>
     <div class="inner">
       <div class="when reveal">
@@ -489,8 +489,8 @@ html.anim .reveal.in { opacity: 1; transform: none; }
         <a class="btn" style="margin-top:1rem" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%20Reception%20of%20Balakrishna%20%26%20Divyapriya&amp;dates=20261114T130000Z%2F20261114T163000Z&amp;location=Sri%20Venkateswara%20Mahal%20A%2FC%2C%20Pattabiram%2C%20Chennai&amp;details=Wedding%20reception%20of%20H.%20Balakrishna%20and%20R.%20Divyapriya%2C%20from%206.30%20pm%20onwards.">Add to calendar</a>
       </div>
     </div>
-    <img class="candles l" src="candles.webp" alt="" width="336" height="592" loading="lazy">
-    <img class="candles r" src="candles.webp" alt="" width="336" height="592" loading="lazy">
+    <img class="candles l" src="vilakku.webp" alt="" width="320" height="600" loading="lazy">
+    <img class="candles r" src="vilakku.webp" alt="" width="320" height="600" loading="lazy">
   </section>
 
   <div class="beam" aria-hidden="true"></div>
@@ -498,7 +498,7 @@ html.anim .reveal.in { opacity: 1; transform: none; }
   <!-- muhurtham: garlands and red carpet -->
   <section class="page muhurtham" aria-labelledby="muh-h">
     <img class="arch" src="arch.webp" alt="" width="1200" height="450">
-    <img class="garland" src="garland.webp" alt="" width="1200" height="495" loading="lazy">
+    <img class="garland" src="muhurtham-top.webp" alt="" width="1200" height="510" loading="lazy">
     <img class="watermark" src="gopuram.webp" alt="" width="820" height="962">
     <div class="inner">
       <div class="when reveal">
@@ -575,7 +575,6 @@ html.anim .reveal.in { opacity: 1; transform: none; }
       <p class="looking">Looking forward to your presence</p>
       <figure class="frame"><img src="couple-photo.webp" alt="Balakrishna and Divyapriya" width="900" height="1600" loading="lazy"></figure>
     </div>
-    <img class="pond portrait-pond" src="pond.webp" alt="" width="1200" height="450" loading="lazy">
   </section>
 
   <div class="beam" aria-hidden="true"></div>
