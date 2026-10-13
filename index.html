@@ -221,6 +221,9 @@ html.sealed .sheet, html.sealed .music, html.sealed .dust { display: none; }
 .family .nm { font-weight: 600; font-size: 1.42rem; line-height: 1.28; }
 .family .home { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.35; margin-top: 0.3rem; }
 .announce { gap: 0.9rem; }
+.blessing { gap: 0.2rem; font-size: 1.08rem; line-height: 1.4; color: var(--ink-soft); margin-top: -0.6rem; }
+.blessing p span { white-space: nowrap; }
+.blessing .label { margin-bottom: 0.25rem; }
 .announce .lead { font-size: 1.36rem; line-height: 1.5; max-width: 21rem; text-wrap: balance; }
 .who { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
 .who .n { font-family: var(--f-script); font-size: clamp(2.6rem, 11.5vw, 3.9rem); line-height: 1.14; color: var(--rose); white-space: nowrap; }
@@ -431,22 +434,8 @@ html.anim .reveal.in { opacity: 1; transform: none; }
         <svg class="emblem" viewBox="0 0 90 110" aria-hidden="true"><use href="#kalasam"/></svg>
         <p class="label">Sri Muthumariamman Thunai</p>
       </div>
-      <div class="families">
-        <div class="family">
-          <span class="mr">Mr. &amp; Mrs.</span>
-          <span class="nm">G. Harikrishnan (Late)</span>
-          <span class="nm">H. Rajeshwari</span>
-          <span class="home">V. Andikuppam, Panruti<br>Cuddalore District</span>
-        </div>
-        <div class="family">
-          <span class="mr">Mr. &amp; Mrs.</span>
-          <span class="nm">V. Ravichandran</span>
-          <span class="nm">R. Vijaya</span>
-          <span class="home">Puliyur<br>Tiruvallur District</span>
-        </div>
-      </div>
       <div class="announce reveal">
-        <p class="lead">solicit your gracious presence, along with your family and friends, on the auspicious occasion of the marriage of</p>
+        <p class="lead">With joy in our hearts, we invite you to celebrate our wedding</p>
         <div class="who">
           <span class="n">H. Balakrishna</span>
           <span class="deg">B.E.</span>
@@ -463,6 +452,11 @@ html.anim .reveal.in { opacity: 1; transform: none; }
         <a class="ev main" href="#rec-h"><span class="k">Reception</span><span class="d">Saturday, 14 Nov</span><span class="t">6.30 pm onwards</span></a>
         <a class="ev" href="#muh-h"><span class="k">Muhurtham</span><span class="d">Sunday, 15 Nov</span><span class="t">6.00 to 7.30 am</span></a>
         <p class="same">Both at Sri Venkateswara Mahal A/C, Pattabiram</p>
+      </div>
+      <div class="blessing reveal">
+        <p class="label">With the blessings of</p>
+        <p><span>Mr. G. Harikrishnan (Late)</span> <span>&amp; Mrs. H. Rajeshwari</span></p>
+        <p><span>Mr. V. Ravichandran</span> <span>&amp; Mrs. R. Vijaya</span></p>
       </div>
     </div>
     <img class="pond" src="pond.webp" alt="" width="1200" height="450">
