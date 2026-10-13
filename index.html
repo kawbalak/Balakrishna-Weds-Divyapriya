@@ -222,7 +222,8 @@ html.sealed .sheet, html.sealed .music, html.sealed .dust { display: none; }
 .family .home { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.35; margin-top: 0.3rem; }
 .announce { gap: 0.9rem; }
 .blessing { gap: 0.2rem; font-size: 1.08rem; line-height: 1.4; color: var(--ink-soft); margin-top: -0.6rem; }
-.blessing p span { white-space: nowrap; }
+.blessing { width: calc(100% + 20px) !important; margin-inline: -10px; }
+.blessing p:not(.label) { white-space: nowrap; font-size: min(1.08rem, 3.35vw); }
 .blessing .label { margin-bottom: 0.25rem; }
 .announce .lead { font-size: 1.36rem; line-height: 1.5; max-width: 21rem; text-wrap: balance; }
 .who { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
@@ -459,8 +460,8 @@ html.anim .reveal.in { opacity: 1; transform: none; }
       </div>
       <div class="blessing reveal">
         <p class="label">With the blessings of</p>
-        <p><span>Mr. G. Harikrishnan (Late)</span> <span>&amp; Mrs. H. Rajeshwari</span></p>
-        <p><span>Mr. V. Ravichandran</span> <span>&amp; Mrs. R. Vijaya</span></p>
+        <p>Mr. G. Harikrishnan (Late) &amp; Mrs. H. Rajeshwari</p>
+        <p>Mr. V. Ravichandran &amp; Mrs. R. Vijaya</p>
       </div>
     </div>
     <img class="pond" src="pond.webp" alt="" width="1200" height="450">
